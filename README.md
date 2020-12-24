@@ -1,6 +1,6 @@
 # Actions-Lean-OpenWrt
 
-- 基于`master`是[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)编译.
+- 基于[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)编译.
 - 自定义文件 “files 大法”是把你自定义的配置编译到固件里。这样升级或恢复出厂设置都不需要保留配置，缺省值就是自定义的配置。
 - 如你现在的network设置编译进固件：首先提取路由固件下的`\etc\config\network` 然后在项目根目录下创建files目录并`push` 到 `\files\etc\config\network `，最后编译出来的固件就是现在设置的network。
 - 通过修改`diypart1.sh`文件修改`feeds.conf.default`配置。已添加helloworld、OAF、jd-dailybonus。#我不知道怎么自动加到config里面去，仅限于本项目下已存在的.config才有哦！
