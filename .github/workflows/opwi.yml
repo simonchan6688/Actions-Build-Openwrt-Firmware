@@ -6,7 +6,7 @@
 # Blog: https://p3terx.com
 #=================================================
 
-name: Build OpenWrt
+name: OpenWrt For D2 with OpWifi
 
 on:
   repository_dispatch:
