@@ -1,4 +1,4 @@
-# Actions-Build-Openwrt-firmware
+# Actions-Build-Openwrt-Firmware
 
 - 基于[coolsnowwolf/lede](https://github.com/coolsnowwolf/lede)编译.
 - 通过修改`diypart2.sh`文件可以自定义默认IP，登陆密码等。现在的默认IP为`192.168.3.1`,密码为'10000.'，不需要更改的加`#`注释就可以。
