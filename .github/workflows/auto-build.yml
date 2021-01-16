@@ -12,14 +12,14 @@ name: Newifi-D2-Openwrt固件自动编译
 
 on:
   repository_dispatch:
+  schedule:
+  - cron: 55 7 17 * *
   workflow_dispatch:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
         required: false
         default: 'false'
-    schedule:
-    - cron: 55 7 15 * *
 env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
