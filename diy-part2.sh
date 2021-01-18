@@ -13,3 +13,6 @@ sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generat
 
 # modify default password
 sed -i 's/root::0:0:99999:7:::/root:$1$xYjM6fLJ$5x0lnNu29mqp9h1TYKV961:18620:0:99999:7:::/g' package/base-files/files/etc/shadow
+# modify Jd-dailybonus autoruntime
+sed -i 's/t, t .. ":05"/t, t .. ":02"/g' package/lean/luci-app-jd-dailybonus/luasrc/model/cbi/jd-dailybonus/client.lua
+sed -i 's/5 /2 /g' package/lean/luci-app-jd-dailybonus/root/usr/share/jd-dailybonus/newapp.sh
