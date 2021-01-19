@@ -19,4 +19,4 @@ git clone https://github.com/fw876/helloworld package/lean/helloworld
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # jd-dailybonus
-git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
+# git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
