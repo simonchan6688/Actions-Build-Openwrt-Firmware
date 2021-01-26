@@ -10,6 +10,8 @@
 
 # Modify default IP
 sed -i 's/192.168.1.1/192.168.3.1/g' package/base-files/files/bin/config_generate
+# modify linux kernel
+sed -i '5.4/4.9/g' target/linux/ramips/Makefile
 
 # modify default password
 sed -i 's/root::0:0:99999:7:::/root:$1$xYjM6fLJ$5x0lnNu29mqp9h1TYKV961:18620:0:99999:7:::/g' package/base-files/files/etc/shadow
