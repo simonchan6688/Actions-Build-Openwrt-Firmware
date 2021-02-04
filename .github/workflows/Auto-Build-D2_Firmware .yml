@@ -8,12 +8,12 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Newifi-D2-固件自动编译
+name: Newifi-D2-openwrt固件自动编译
 
 on:
   repository_dispatch:
   schedule:
-  - cron: 0 0 1,16 * *
+  - cron: 55 7 1,16 * *
   workflow_dispatch:
     inputs:
       ssh:
