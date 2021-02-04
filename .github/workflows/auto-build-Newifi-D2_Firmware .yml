@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Newifi-D2-固件自动编译
+name: Newifi-D2-Lede固件自动编译
 
 on:
   repository_dispatch:
