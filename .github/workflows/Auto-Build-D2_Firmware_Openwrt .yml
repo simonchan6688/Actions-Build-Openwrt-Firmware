@@ -27,6 +27,7 @@ env:
   CONFIG_FILE: opwi.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: diy-part3.sh
+  ADF_GC: 110-gcc720-segfault.patch
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_COWTRANSFER: false
@@ -75,6 +76,7 @@ jobs:
     - name: Load custom configuration
       run: |
         [ -e files ] && mv files openwrt/files
+        [ -e $ADF_GC ] && mv $ADF_GC openwrt/tools/flex/patches/110-gcc720-segfault.patch
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x $DIY_P2_SH
         cd openwrt
