@@ -13,7 +13,7 @@ name: Newifi-D2-Lede固件自动编译
 on:
   repository_dispatch:
   schedule:
-  - cron: 0 0 1,16 * *
+  - cron: 0 0 3,19 * *
   workflow_dispatch:
     inputs:
       ssh:
