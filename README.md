@@ -8,5 +8,5 @@
 - 你可以在本地生成xxx.config文件然后上传到本项目下，然后修改`.github/workflows/xxx.yml`中`xxx.config`为你的自命名xxx.config文件。
 - 如果需要，可以编写多个`workflows`文件对应`xxx.config`，开启多流程同时编译。
 - 点击Star即可开始编译。
-- 大约2个小时左右再回来看看有没有完成编译。
-- 修改xxx.config文件后会自动进行编译哦。
+- 设置为每月1号16号自动拉取源码并编译。
+- 编译完成会自动生成releases，最多保存最近6个tag
