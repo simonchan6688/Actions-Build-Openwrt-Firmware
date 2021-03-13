@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Newifi自动编译
+name: Newifi自动编译源码
 
 on:
   repository_dispatch:
@@ -21,11 +21,11 @@ on:
         required: false
         default: 'false'
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/coolsnowwolf/openwrt
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: d2all.config
-  DIY_P1_SH: diy-part1.sh
+  CONFIG_FILE: Newifi_D2/op.config
+  DIY_P1_SH: Newifi_D2/diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
