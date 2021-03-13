@@ -22,7 +22,7 @@ on:
         default: 'false'
 env:
   REPO_URL: https://github.com/coolsnowwolf/openwrt
-  REPO_BRANCH: master
+  REPO_BRANCH: lede-17.01
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Newifi_D2/op.config
   DIY_P1_SH: D2-openwrt/diy-part1.sh
