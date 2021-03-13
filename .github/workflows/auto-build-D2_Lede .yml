@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Newifi-D2-Lede固件自动编译
+name: 使用Lede源码编译
 
 on:
   repository_dispatch:
@@ -25,7 +25,7 @@ env:
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
   CONFIG_FILE: Newifi_D2/le.config
-  DIY_P1_SH: diy-part1.sh
+  DIY_P1_SH: lede/diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
