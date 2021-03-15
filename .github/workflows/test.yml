@@ -59,11 +59,11 @@ jobs:
     - name: notification1
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run: 
-        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -d chat_id=417095167 -d text=start
+        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -d chat_id=417095167 -d text=开始编译1
     - name: notification2
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run: 
-        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -f chat_id='417095167' -f text='${{matrix.target}}编译开始'
+        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -F chat_id='417095167' -F text='${{matrix.target}}编译开始'
     - name: notification3
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run:
