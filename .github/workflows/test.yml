@@ -43,20 +43,8 @@ jobs:
     - name: Checkout
       uses: actions/checkout@main
 
-    - name: Initialization environment
-      env:
-        DEBIAN_FRONTEND: noninteractive
-      run: |
-        sudo rm -rf /etc/apt/sources.list.d/* /usr/share/dotnet /usr/local/lib/android /opt/ghc
-        sudo -E apt-get -qq update
-        sudo -E apt-get -qq install $(curl -fsSL git.io/depends-ubuntu-1804)
-        sudo -E apt-get -qq autoremove --purge
-        sudo -E apt-get -qq clean
-        sudo timedatectl set-timezone "$TZ"
-        sudo mkdir -p /workdir
-        sudo chown $USER:$GROUPS /workdir
-                
     - name: build start
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run: 
         curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -F chat_id='417095167' -F text='开始编译'
+        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -d chat_id=417095167 -d text=start
