@@ -57,10 +57,10 @@ jobs:
         sudo chown $USER:$GROUPS /workdir
         
         
-    - name: build start
+    - name: start Compile
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run: 
-        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -f chat_id='417095167' -f text='${{matrix.target}}开始编译'
+        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -d chat_id=417095167 -d text=${{matrix.target}}开始编译
  
     - name: Clone source code
       working-directory: /workdir
@@ -199,5 +199,4 @@ jobs:
         
     - name: tg notification
       if: env.TG_NOTIFICATION == 'true' && !cancelled() && steps.compile.outputs.status == 'success'
-      run: curl https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -f chat_id='417095167' -f text='${{matrix.target}}编译完成'
- 
+      run: curl https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -d chat_id=417095167 -d text=${{matrix.target}}编译完成
