@@ -99,7 +99,9 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-
+        
+    - name: build start
+      run: curl https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage?chat_id=417095167&text=${{matrix.target}}开始编译
     - name: Compile the firmware
       id: compile
       run: |
