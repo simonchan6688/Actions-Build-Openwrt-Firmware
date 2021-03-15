@@ -60,7 +60,7 @@ jobs:
     - name: build start
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run: 
-        curl https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage?chat_id=417095167&text=${{matrix.target}}开始编译
+        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage?chat_id=417095167&text=${{matrix.target}}开始编译
    
     - name: Clone source code
       working-directory: /workdir
