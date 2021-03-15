@@ -59,5 +59,4 @@ jobs:
     - name: build start
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run: 
-        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage \
-        -F chat_id='417095167' -F text='开始编译'
+        curl -X POST https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage -F chat_id='417095167' -F text='开始编译'
