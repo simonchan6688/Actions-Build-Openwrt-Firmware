@@ -32,6 +32,7 @@ env:
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
+  TG_NOTIFICATION: true
   TZ: Asia/Shanghai
 
 jobs:
@@ -173,7 +174,6 @@ jobs:
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
-#       files: ${{ env.FIRMWARE }}openwrt/bin/targets/ramips/mt7621/openwrt-ramips-mt7621-d-team_newifi-d2-squashfs-sysupgrade.bin
         files: ${{ env.FIRMWARE }}/*sysupgrade.bin
 
     - name: Delete workflow runs
@@ -190,3 +190,7 @@ jobs:
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: tg notification
+      if: env.TG_NOTIFICATION == 'true' && !cancelled() && steps.compile.outputs.status == 'success'
+      run: curl https://api.telegram.org/bot712256052:AAGxtz7sZmnEQPai0ZcS96P3ShUkMQ08peA/sendMessage?chat_id=417095167&text=${{matrix.target}}编译完成
