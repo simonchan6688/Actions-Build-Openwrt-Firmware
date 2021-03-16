@@ -59,16 +59,16 @@ jobs:
     - name: notification1
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run: 
-        curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text=${{CONFIG_FILE}}开始编译1
+        curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text="${{CONFIG_FILE}}开始编译1"
     - name: notification2
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run: 
-          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text=${{REPO_URL}}开始编译2
+          curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text="${{REPO_URL}}开始编译2"
 
     - name: notification3
       if: env.TG_NOTIFICATION == 'true' && !cancelled()
       run:
-        curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text=${{CONFIG_FILE}}开始编译3
+        curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text="${{CONFIG_FILE}}开始编译3"
 
 
 
