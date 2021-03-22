@@ -32,6 +32,7 @@ env:
   UPLOAD_COWTRANSFER: false
   UPLOAD_WETRANSFER: false
   UPLOAD_RELEASE: true
+  TG_NOTIFICATION: true
   TZ: Asia/Shanghai
 
 jobs:
