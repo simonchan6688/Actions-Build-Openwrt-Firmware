@@ -189,4 +189,4 @@ jobs:
     - name: tg notification
       if: env.TG_NOTIFICATION == 'true' && !cancelled() && steps.compile.outputs.status == 'success'
 #      run: curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text=${{ steps.tag.outputs.release_tag }}编译完成
-      run: curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text=使用Openwrt源码编译D2固件已完成，请访问https://github.com/simonchan6688/Actions-Build-Openwrt-Firmware/releases下载固件
+      run: curl -s -X POST https://api.telegram.org/bot${{ secrets.TELEGRAM_BOT_TOKEN }}/sendMessage -d chat_id=${{ secrets.TELEGRAM_CHAT_ID }} -d text=使用Openwrt源码编译D2固件已完成，下载请访问https://github.com/simonchan6688/Actions-Build-Openwrt-Firmware/releases
