@@ -13,7 +13,7 @@ name: 使用Openwrt源码编译
 on:
   repository_dispatch:
   schedule:
-  - cron: 5 7 5 * *
+  - cron: 5 7 15 * *
   workflow_dispatch:
     inputs:
       ssh:
