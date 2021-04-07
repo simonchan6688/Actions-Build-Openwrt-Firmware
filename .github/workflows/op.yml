@@ -12,8 +12,8 @@ name: 使用lean源码编译
 
 on:
   repository_dispatch:
-  schedule:
-  - cron: 5 7 15 * *
+#  schedule:
+#  - cron: 5 7 15 * *
   workflow_dispatch:
     inputs:
       ssh:
