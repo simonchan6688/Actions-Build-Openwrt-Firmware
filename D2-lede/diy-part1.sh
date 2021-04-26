@@ -20,3 +20,6 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # jd-dailybonus
 # git clone https://github.com/jerrykuku/luci-app-jd-dailybonus.git package/lean/luci-app-jd-dailybonus
+
+# pushbot 
+git clone https://github.com/zzsj0928/luci-app-pushbot package/lean/luci-app-pushbot
