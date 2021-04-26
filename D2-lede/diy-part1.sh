@@ -23,3 +23,6 @@ git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 
 # pushbot 
 git clone https://github.com/zzsj0928/luci-app-pushbot package/lean/luci-app-pushbot
+
+# wol plus
+# git clone https://github.com/sundaqiang/openwrt-packages/tree/master/luci-app-services-wolplus  package/lean/luci-app-services-wolplus
