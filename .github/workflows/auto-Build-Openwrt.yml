@@ -13,7 +13,7 @@ name: 使用Openwrt源码编译
 on:
   repository_dispatch:
   schedule:
-  - cron: 5 7 5 * *
+  - cron: 5 7 1 * *
   workflow_dispatch:
     inputs:
       ssh:
@@ -182,7 +182,7 @@ jobs:
       uses: dev-drprasad/delete-older-releases@v0.1.0
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       with:
-        keep_latest: 10
+        keep_latest: 20
         delete_tags: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
