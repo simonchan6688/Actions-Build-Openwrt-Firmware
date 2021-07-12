@@ -19,7 +19,7 @@ on:
       ssh:
         description: 'SSH connection to Actions'
         required: false
-        default: 'false'
+        default: 'true'
 env:
   REPO_URL: https://github.com/simonchan6688/openwrt
   REPO_BRANCH: lede-17.01
