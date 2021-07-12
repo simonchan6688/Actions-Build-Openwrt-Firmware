@@ -18,7 +18,7 @@ on:
     inputs:
       ssh:
         description: 'SSH connection to Actions'
-        required: false
+        required: true
         default: 'true'
 env:
   REPO_URL: https://github.com/simonchan6688/openwrt
