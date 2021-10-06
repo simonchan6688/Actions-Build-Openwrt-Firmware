@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: 使用Lede源码编译
+name: 编译x86
 
 on:
   repository_dispatch:
@@ -24,7 +24,7 @@ env:
   REPO_URL: https://github.com/coolsnowwolf/lede
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: Newifi_D2/2021007.config
+  CONFIG_FILE: win/win.config
   DIY_P1_SH: D2-lede/diy-part1.sh
   DIY_P2_SH: diy-part2.sh
   UPLOAD_BIN_DIR: true
