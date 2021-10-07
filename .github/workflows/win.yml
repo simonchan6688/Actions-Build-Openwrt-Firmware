@@ -13,7 +13,7 @@ name: 编译x86
 on:
   repository_dispatch:
   schedule:
-  - cron: 0 0 2 * *
+  - cron: 0 0 1 */4 *
   workflow_dispatch:
     inputs:
       ssh:
