@@ -13,7 +13,7 @@ name: 使用Lede源码编译
 on:
   repository_dispatch:
   schedule:
-  - cron: 5 5 2 * *
+  - cron: 5 5 2 */3 *
   workflow_dispatch:
     inputs:
       ssh:
