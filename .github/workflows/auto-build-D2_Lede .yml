@@ -38,7 +38,7 @@ env:
 
 jobs:
   build:
-    runs-on: debian-latest
+    runs-on: debian-11
 
     steps:
     - name: Checkout
