@@ -6,7 +6,7 @@
 # Blog: https://P3TERX.com
 #=================================================
 
-name: OpenWrt Builder
+name: Auto OpenWrt Builder
 
 on:
   repository_dispatch:
