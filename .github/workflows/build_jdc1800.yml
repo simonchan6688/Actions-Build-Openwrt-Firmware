@@ -6,7 +6,7 @@
 # Blog: https://P3TERX.com
 #=================================================
 
-name: Auto OpenWrt Builder
+name: Jdc-ax1800pro Builder
 
 on:
   repository_dispatch:
